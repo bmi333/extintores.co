@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extintores Colombia | Venta, Recarga y Mantenimiento Profesional</title>
+  <meta name="description" content="Venta, recarga, mantenimiento e inspección de extintores para hogares, empresas, comercios y vehículos en Colombia. Servicio a domicilio rápido y certificado.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Extintores Colombia | Venta, Recarga y Mantenimiento">
+  <meta property="og:description" content="Protege tu hogar, empresa o vehículo con extintores certificados. Atención rápida y cotizaciones inmediatas por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+
+  <!-- Google Fonts & FontAwesome CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ==========================================
+       VARIABLES & BASE STYLES
+       ========================================== */
+    :root {
+      --bg-dark: #090d16;
+      --bg-card: #111827;
+      --bg-card-hover: #1f293d;
+      --red-primary: #dc2626;
+      --red-hover: #ef4444;
+      --red-glow: rgba(220, 38, 38, 0.4);
+      --green-neon: #22c55e;
+      --green-glow: rgba(34, 197, 94, 0.4);
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: var(--bg-dark);
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==========================================
+       KEYFRAMES & ANIMATIONS
+       ========================================== */
+    @keyframes pulse-neon {
+      0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
+
+    @keyframes pulse-red {
+      0% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes float-slow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-18px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Scroll Reveal Classes controlled by JS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active, .reveal-left.active, .reveal-right.active {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    /* Floating utilities */
+    .floating-element {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .floating-slow {
+      animation: float-slow 6s ease-in-out infinite;
+    }
+
+    /* ==========================================
+       BUTTONS & UTILITIES
+       ========================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-neon {
+      background-color: var(--green-neon);
+      color: #000;
+      animation: pulse-neon 2s infinite;
+    }
+
+    .btn-neon:hover {
+      background-color: #16a34a;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px var(--green-glow);
+    }
+
+    .btn-red {
+      background-color: var(--red-primary);
+      color: #fff;
+      animation: pulse-red 2.5s infinite;
+    }
+
+    .btn-red:hover {
+      background-color: var(--red-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px var(--red-glow);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--border-color);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--red-primary);
+      background: rgba(220, 38, 38, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      background: rgba(220, 38, 38, 0.15);
+      border: 1px solid var(--red-primary);
+      color: var(--red-hover);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    /* ==========================================
+       1. TOP BAR + HEADER
+       ========================================== */
+    .top-bar {
+      background-color: #030712;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.5rem 0;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .top-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .top-info span i {
+      color: var(--red-primary);
+      margin-right: 0.35rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 13, 22, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--red-primary), #7f1d1d);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.3rem;
+      box-shadow: 0 0 15px var(--red-glow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--red-hover);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================
+       2. HERO PRINCIPAL
+       ========================================== */
+    .hero {
+      position: relative;
+      padding: 5rem 0 6rem 0;
+      overflow: hidden;
+      background: radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(17, 24, 39, 0.8) 0%, transparent 50%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(to right, #ffffff, #d1d5db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content h1 span {
+      background: linear-gradient(to right, var(--red-hover), #f87171);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .extinguisher-card {
+      position: relative;
+      width: 320px;
+      height: 420px;
+      background: linear-gradient(145deg, #1f293d, #111827);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    .extinguisher-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 25px;
+      padding: 1px;
+      background: linear-gradient(135deg, var(--red-primary), transparent, var(--green-neon));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .extinguisher-icon {
+      font-size: 8rem;
+      color: var(--red-primary);
+      filter: drop-shadow(0 10px 15px rgba(220, 38, 38, 0.4));
+    }
+
+    .floating-shield {
+      position: absolute;
+      top: 10%;
+      left: -20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 0.85rem 1.25rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .floating-shield i {
+      color: var(--green-neon);
+      font-size: 1.5rem;
+    }
+
+    .floating-check {
+      position: absolute;
+      bottom: 10%;
+      right: -20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 0.85rem 1.25rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .floating-check i {
+      color: var(--red-primary);
+      font-size: 1.5rem;
+    }
+
+    /* ==========================================
+       3. CINTA DE SERVICIOS / MARQUEE
+       ========================================== */
+    .marquee-section {
+      background: var(--red-primary);
+      padding: 0.85rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #fff;
+      letter-spacing: 1px;
+      padding: 0 1.5rem;
+    }
+
+    .marquee-item i {
+      font-size: 0.6rem;
+      opacity: 0.8;
+    }
+
+    /* ==========================================
+       4. SOBRE NOSOTROS + ESTADÍSTICAS
+       ========================================== */
+    .about-section {
+      padding: 6rem 0;
+      background: var(--bg-dark);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 2.3rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .about-features {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .feature-item i {
+      color: var(--green-neon);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 2rem 1.5rem;
+      border-radius: 20px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--red-primary);
+      box-shadow: 0 10px 25px rgba(220, 38, 38, 0.15);
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: var(--font-heading);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-number span {
+      color: var(--red-primary);
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* ==========================================
+       5. SERVICIOS (4 Cards)
+       ========================================== */
+    .services-section {
+      padding: 6rem 0;
+      background: #0d121f;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--red-primary);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(220, 38, 38, 0.2);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(220, 38, 38, 0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--red-hover);
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--red-primary);
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+      flex-grow: 1;
+    }
+
+    /* ==========================================
+       6. TIPOS DE EXTINTORES
+       ========================================== */
+    .types-section {
+      padding: 6rem 0;
+      background: var(--bg-dark);
+    }
+
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .type-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .type-card:hover {
+      border-color: var(--green-neon);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(34, 197, 94, 0.1);
+    }
+
+    .type-tag {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--red-hover);
+      margin-bottom: 1rem;
+    }
+
+    .type-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .type-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .advice-cta-box {
+      background: linear-gradient(135deg, rgba(31, 41, 61, 0.8), rgba(17, 24, 39, 0.9));
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       7. ¿CÓMO FUNCIONA?
+       ========================================== */
+    .steps-section {
+      padding: 6rem 0;
+      background: #0d121f;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      border-color: var(--red-primary);
+      transform: translateY(-6px);
+    }
+
+    .step-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.15);
+      font-family: var(--font-heading);
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+    }
+
+    .step-icon {
+      font-size: 2rem;
+      color: var(--red-primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .step-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================
+       8. COBERTURA
+       ========================================== */
+    .coverage-section {
+      padding: 6rem 0;
+      background: var(--bg-dark);
+      text-align: center;
+    }
+
+    .city-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.85rem;
+      max-width: 850px;
+      margin: 2rem auto 2.5rem auto;
+    }
+
+    .city-tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .city-tag i {
+      color: var(--red-primary);
+    }
+
+    .city-tag:hover {
+      border-color: var(--red-primary);
+      transform: scale(1.05);
+      background: var(--bg-card-hover);
+    }
+
+    .coverage-note {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ==========================================
+       9. TESTIMONIOS
+       ========================================== */
+    .testimonials-section {
+      padding: 6rem 0;
+      background: #0d121f;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--border-color);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .stars {
+      color: #f59e0b;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .user-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--red-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .user-details h4 {
+      font-size: 0.95rem;
+    }
+
+    .user-details span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .demo-disclaimer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      opacity: 0.7;
+    }
+
+    /* ==========================================
+       10. PREGUNTAS FRECUENTES — FAQ
+       ========================================== */
+    .faq-section {
+      padding: 6rem 0;
+      background: var(--bg-dark);
+    }
+
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-header {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .faq-header i {
+      transition: var(--transition);
+      color: var(--red-primary);
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+      padding: 0 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active {
+      border-color: var(--red-primary);
+    }
+
+    .faq-item.active .faq-header i {
+      transform: rotate(180deg);
+    }
+
+    .faq-item.active .faq-content {
+      max-height: 300px;
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      transition: max-height 0.35s ease-in-out;
+    }
+
+    /* ==========================================
+       11. CTA FINAL
+       ========================================== */
+    .cta-section {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #111827 0%, #030712 100%);
+      position: relative;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cta-box {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .cta-box h2 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ==========================================
+       12. FOOTER
+       ========================================== */
+    footer {
+      background: #030712;
+      border-top: 1px solid var(--border-color);
+      padding: 4rem 0 2rem 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--red-hover);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-color);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ==========================================
+       13. BOTÓN FLOTANTE DE WHATSAPP
+       ========================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+    }
+
+    .whatsapp-btn {
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      animation: pulse-neon 2s infinite;
+      transition: var(--transition);
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 70px;
+      background: var(--bg-card);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover .whatsapp-tooltip {
+      opacity: 1;
+      transform: translateX(-5px);
+    }
+
+    /* ==========================================
+       RESPONSIVE DESIGN (MOBILE OPTIMIZED)
+       ========================================== */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content p {
+        margin: 0 auto 2rem auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 73px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 73px);
+        background: var(--bg-dark);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transition: var(--transition);
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+
+      .stats-grid, .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .whatsapp-tooltip {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Servicio de Extintores Colombia",
+    "description": "Venta, recarga, mantenimiento e inspección técnica de extintores en Colombia.",
+    "telephone": "+573005360298",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO"
+    },
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 1. TOP BAR + HEADER -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fa-solid fa-bolt"></i> Atención rápida</span>
+        <span><i class="fa-solid fa-truck-fast"></i> Servicio a domicilio</span>
+        <span><i class="fa-brands fa-whatsapp"></i> Cotizaciones inmediatas</span>
+      </div>
+      <div>
+        <span><i class="fa-regular fa-clock"></i> Lunes a Sábado: 8:00 AM - 6:00 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-fire-extinguisher"></i>
+        </div>
+        <span>EXTINTORES<span style="color:var(--red-primary)">.CO</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" onclick="closeMenu()">Inicio</a>
+        <a href="#servicios" onclick="closeMenu()">Servicios</a>
+        <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
+        <a href="#cobertura" onclick="closeMenu()">Cobertura</a>
+        <a href="#faq" onclick="closeMenu()">Preguntas Frecuentes</a>
+        <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20cotizar%20un%20extintor." target="_blank" class="btn btn-neon btn-header">
+          <i class="fa-brands fa-whatsapp"></i> COTIZAR POR WHATSAPP
+        </a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. HERO PRINCIPAL -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-left">
+        <span class="badge"><i class="fa-solid fa-shield-halved"></i> Servicio Técnico Certificado</span>
+        <h1>Venta, Recarga y Mantenimiento de <span>Extintores</span></h1>
+        <p>Protege tu hogar, oficina, negocio y vehículo con extintores certificados y servicio profesional. Atención rápida y servicio a domicilio.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20cotizar%20un%20extintor." target="_blank" class="btn btn-neon">
+            <i class="fa-brands fa-whatsapp"></i> COTIZAR POR WHATSAPP
+          </a>
+          <a href="#servicios" class="btn btn-outline">
+            VER SERVICIOS <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-right">
+        <div class="extinguisher-card floating-slow">
+          <i class="fa-solid fa-fire-extinguisher extinguisher-icon"></i>
+          <span style="margin-top: 1rem; font-weight: 700; font-size: 1.1rem; color: #fff;">EQUIPO CERTIFICADO</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Cumple normativa colombiana</span>
+        </div>
+
+        <div class="floating-shield floating-element">
+          <i class="fa-solid fa-circle-check"></i>
+          <div>
+            <strong style="display:block; font-size: 0.9rem;">Servicio Garantizado</strong>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Atención inmediata</span>
+          </div>
+        </div>
+
+        <div class="floating-check floating-slow">
+          <i class="fa-solid fa-truck-ramp-box"></i>
+          <div>
+            <strong style="display:block; font-size: 0.9rem;">A Domicilio</strong>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Recogida y entrega</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CINTA DE SERVICIOS / ESPECIALIDADES -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item">VENTA DE EXTINTORES <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">RECARGA PROFESIONAL <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">MANTENIMIENTO PREVENTIVO <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">INSPECCIÓN TÉCNICA <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">EXTINTORES PARA VEHÍCULOS <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">SERVICIO PARA EMPRESAS <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">DOMICILIOS RÁPIDOS <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">SEGURIDAD CONTRA INCENDIOS <i class="fa-solid fa-fire"></i></div>
+      <!-- Repeat for seamless loop -->
+      <div class="marquee-item">VENTA DE EXTINTORES <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">RECARGA PROFESIONAL <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">MANTENIMIENTO PREVENTIVO <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">INSPECCIÓN TÉCNICA <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">EXTINTORES PARA VEHÍCULOS <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">SERVICIO PARA EMPRESAS <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">DOMICILIOS RÁPIDOS <i class="fa-solid fa-fire"></i></div>
+      <div class="marquee-item">SEGURIDAD CONTRA INCENDIOS <i class="fa-solid fa-fire"></i></div>
+    </div>
+  </div>
+
+  <!-- 4. SOBRE NOSOTROS + ESTADÍSTICAS -->
+  <section class="about-section" id="nosotros">
+    <div class="container about-grid">
+      <div class="about-text reveal-left">
+        <span class="badge">Sobre Nosotros</span>
+        <h2>Seguridad que comienza con un extintor en buen estado</h2>
+        <p>Somos especialistas en soluciones integrales contra incendios. Brindamos servicios completos de venta, recarga, mantenimiento e inspección de extintores asegurando que tus equipos reaccionen de manera óptima ante cualquier emergencia.</p>
+        <p>Atendemos sectores residenciales, comerciales, industriales y automotrices con los más altos estándares de calidad y la rapidez que exige la seguridad de tu patrimonio.</p>
+        
+        <div class="about-features">
+          <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Atención Profesional</div>
+          <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Servicio a Domicilio</div>
+          <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Asesoría Especializada</div>
+          <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Mantenimiento Preventivo</div>
+        </div>
+      </div>
+
+      <div class="stats-grid reveal-right" id="statsContainer">
+        <div class="stat-card">
+          <span class="stat-number" data-target="1000">+0</span>
+          <span class="stat-label">Extintores Atendidos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="500">+0</span>
+          <span class="stat-label">Clientes Satisfechos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="20">+0</span>
+          <span class="stat-label">Ciudades Atendidas</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="5">+0</span>
+          <span class="stat-label">Servicios Especializados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SERVICIOS -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Nuestra Oferta</span>
+        <h2>Nuestros Servicios Especializados</h2>
+        <p>Soluciones rápidas y confiables adaptadas a las necesidades particulares de cada espacio.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-fire"></i></div>
+          <h3>Venta de Extintores</h3>
+          <p>Extintores nuevos y certificados para hogares, oficinas, comercios, empresas y vehículos. Todos los agentes y capacidades.</p>
+          <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20cotizar%20un%20extintor." target="_blank" class="btn btn-red" style="width: 100%;">
+            Cotizar por WhatsApp
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-rotate-right"></i></div>
+          <h3>Recarga de Extintores</h3>
+          <p>Servicio profesional de recarga periódica para mantener tus extintores con la presión y agente adecuado, listos para actuar.</p>
+          <a href="https://wa.me/573005360298?text=Hola%2C%20necesito%20recargar%20unos%20extintores." target="_blank" class="btn btn-red" style="width: 100%;">
+            Solicitar Recarga
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Mantenimiento e Inspección</h3>
+          <p>Revisión detallada de manómetro, manguera, válvula, agente y estado general del cilindro con dictamen técnico.</p>
+          <a href="https://wa.me/573005360298?text=Hola%2C%20necesito%20mantenimiento%20de%20extintores%20para%20mi%20empresa." target="_blank" class="btn btn-red" style="width: 100%;">
+            Solicitar Mantenimiento
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-car"></i></div>
+          <h3>Extintores para Carros</h3>
+          <p>Equipos compactos y reglamentarios para cumplir la norma de tránsito en vehículos particulares, de carga y servicio público.</p>
+          <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20cotizar%20un%20extintor%20para%20mi%20carro." target="_blank" class="btn btn-red" style="width: 100%;">
+            Cotizar para Carro
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TIPOS DE EXTINTORES -->
+  <section class="types-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Guía Visual</span>
+        <h2>Tipos de Extintores Disponibles</h2>
+        <p>Conoce el agente extintor adecuado según el tipo de riesgo presente en tu entorno.</p>
+      </div>
+
+      <div class="types-grid">
+        <div class="type-card reveal">
+          <div class="type-tag">ABC</div>
+          <h4>Polvo Químico Seco</h4>
+          <p>Multiuso para sólidos (A), líquidos inflamables (B) y equipos eléctricos (C).</p>
+        </div>
+
+        <div class="type-card reveal">
+          <div class="type-tag">BC</div>
+          <h4>Dióxido de Carbono / PQS</h4>
+          <p>Ideal para fuegos por líquidos combustibles y equipos bajo tensión eléctrica.</p>
+        </div>
+
+        <div class="type-card reveal">
+          <div class="type-tag">CO₂</div>
+          <h4>Dióxido de Carbono</h4>
+          <p>Agente limpio que no deja residuos. Perfecto para laboratorios y salas de cómputo.</p>
+        </div>
+
+        <div class="type-card reveal">
+          <div class="type-tag">H₂O</div>
+          <h4>Agua Presurizada</h4>
+          <p>Indicado exclusivamente para materiales sólidos ordinarios como madera, papel y telas.</p>
+        </div>
+
+        <div class="type-card reveal">
+          <div class="type-tag"><i class="fa-solid fa-car-side"></i></div>
+          <h4>Para Vehículos</h4>
+          <p>Diseño compacto de fácil soporte y reacción inmediata en el automóvil.</p>
+        </div>
+      </div>
+
+      <div class="advice-cta-box reveal">
+        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">¿Dudas sobre cuál elegir?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Te asesoramos en segundos para determinar el equipo exacto que requiere tu espacio.</p>
+        <a href="https://wa.me/573005360298?text=Hola%2C%20necesito%20asesor%C3%ADa%20para%20saber%20qu%C3%A9%20tipo%20de%20extintor%20necesito." target="_blank" class="btn btn-neon">
+          <i class="fa-brands fa-whatsapp"></i> NO SÉ QUÉ EXTINTOR NECESITO
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ¿CÓMO FUNCIONA? -->
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Proceso Simple</span>
+        <h2>¿Cómo Solicitas tu Servicio?</h2>
+        <p>Un proceso directo en 4 sencillos pasos para asegurar la protección de tus instalaciones.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-number">01</span>
+          <div class="step-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>Contáctanos</h3>
+          <p>Escríbenos directamente por WhatsApp solicitando tu requerimiento.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <span class="step-number">02</span>
+          <div class="step-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3>Cuéntanos qué necesitas</h3>
+          <p>Indica si requieres venta nueva, recarga, mantenimiento o inspección.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <span class="step-number">03</span>
+          <div class="step-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3>Recibe tu cotización</h3>
+          <p>Te enviamos disponibilidad, tiempos de atención y precio competitivo.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <span class="step-number">04</span>
+          <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Recibe el servicio</h3>
+          <p>Coordinamos la entrega o recogida a domicilio según la programación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. COBERTURA -->
+  <section class="coverage-section" id="cobertura">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Zonas de Atención</span>
+        <h2>Servicio para Hogares, Empresas y Vehículos</h2>
+        <p>Atendemos diversas zonas con logística eficiente para domicilios y envíos nacionales.</p>
+      </div>
+
+      <div class="city-tags reveal">
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Bucaramanga</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Floridablanca</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Piedecuesta</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Girón</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Bogotá</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Medellín</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Cali</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Barranquilla</span>
+        <span class="city-tag"><i class="fa-solid fa-location-dot"></i> Cartagena</span>
+      </div>
+
+      <p class="coverage-note reveal">Consulta disponibilidad de servicio presencial, recogida domiciliaria o envío a tu ciudad.</p>
+
+      <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20servicio%20o%20env%C3%ADo%20para%20mi%20ciudad." target="_blank" class="btn btn-neon reveal">
+        <i class="fa-brands fa-whatsapp"></i> CONSULTAR COBERTURA
+      </a>
+    </div>
+  </section>
+
+  <!-- 9. TESTIMONIOS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Experiencias</span>
+        <h2>Lo que Opinan Nuestros Clientes</h2>
+        <p>Demostración del compromiso que mantenemos con el servicio al cliente y la rapidez.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Excelente servicio de recarga a domicilio. Recogieron los extintores de la oficina y los entregaron a tiempo y debidamente señalizados."</p>
+          <div class="user-info">
+            <div class="user-avatar">CP</div>
+            <div class="user-details">
+              <h4>Carlos Paredes</h4>
+              <span>Administrador de Empresa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Compré el extintor para mi vehículo nuevo. Me explicaron muy bien cómo usarlo y la entrega por WhatsApp fue sumamente rápida."</p>
+          <div class="user-info">
+            <div class="user-avatar">AR</div>
+            <div class="user-details">
+              <h4>Andrea Ramírez</h4>
+              <span>Cliente Particular</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Solicitamos la inspección anual para los extintores del local comercial. Muy profesionales, respuesta inmediata por WhatsApp."</p>
+          <div class="user-info">
+            <div class="user-avatar">MG</div>
+            <div class="user-details">
+              <h4>Mauricio Gómez</h4>
+              <span>Comerciante</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="demo-disclaimer">* Ejemplos ilustrativos del nivel de servicio y atención brindado.</p>
+    </div>
+  </section>
+
+  <!-- 10. PREGUNTAS FRECUENTES — FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Resolvemos tus Dudas</span>
+        <h2>Preguntas Frecuentes</h2>
+        <p>Respuestas claras sobre el mantenimiento, recargas y tipos de extintores.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Cada cuánto debo recargar un extintor?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Por norma general, los extintores deben someterse a mantenimiento e inspección preventiva de forma anual (cada 12 meses). Asimismo, si el equipo ha sido percutido o utilizado parcialmente, debe recargarse inmediatamente independientemente del tiempo transcurrido.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Qué extintor necesito para mi casa?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Para la mayoría de los hogares se recomienda un extintor multipropósito Tipo ABC (Polvo Químico Seco) de 5 a 10 libras, ya que cubre riesgos comunes como madera, papel, líquidos inflamables y cortocircuitos eléctricos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Qué extintor necesita un carro?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Los vehículos particulares suelen requerir un extintor compacto ABC de 5 lbs. Para vehículos comerciales, de carga o transporte público, se deben considerar exigencias específicas de capacidad reglamentaria.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Realizan mantenimiento de extintores?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Sí, realizamos mantenimiento integral que incluye inspección de componentes, prueba de presión, verificación de manómetro y estado del cilindro para garantizar su funcionamiento óptimo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Realizan servicio a domicilio?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Ofrecemos servicio de recogida y entrega a domicilio para empresas y particulares según la zona y disponibilidad de cobertura local.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Puedo comprar varios extintores para una empresa?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Por supuesto. Atendemos pedidos institucionales y corporativos con precios especiales por volumen e inspección técnica previa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            ¿Hacen envíos de extintores?
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-content">
+            <p>Realizamos despachos y envíos nacionales bajo las condiciones y normativas requeridas para el transporte de cilindros presurizados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CTA FINAL -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>¿Necesitas un extintor o tienes uno que necesita mantenimiento?</h2>
+        <p>Escríbenos por WhatsApp y recibe asesoría inmediata y cotización sin compromiso.</p>
+        <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20de%20extintores." target="_blank" class="btn btn-neon" style="font-size: 1.1rem; padding: 1.1rem 2.25rem;">
+          <i class="fa-brands fa-whatsapp"></i> COTIZAR AHORA POR WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+            <div class="logo-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
+            <span>EXTINTORES<span style="color:var(--red-primary)">.CO</span></span>
+          </a>
+          <p style="margin-top: 1rem;">Especialistas en protección contra incendios, venta, recarga y mantenimiento técnico preventivo para todo Colombia.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Venta de Extintores</a></li>
+            <li><a href="#servicios">Recarga Técnica</a></li>
+            <li><a href="#servicios">Mantenimiento</a></li>
+            <li><a href="#servicios">Extintores para Carros</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#cobertura">Cobertura</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><i class="fa-brands fa-whatsapp" style="color: var(--green-neon);"></i> +57 300 536 0298</li>
+            <li><i class="fa-regular fa-clock"></i> Lun - Sáb: 8:00 AM - 6:00 PM</li>
+            <li><i class="fa-solid fa-location-dot"></i> Cobertura Nacional</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Servicio Técnico de Extintores Colombia. Todos los derechos reservados.</p>
+        <p><a href="#">Aviso de Privacidad</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. BOTÓN FLOTANTE DE WHATSAPP -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">Cotiza por WhatsApp</span>
+    <a href="https://wa.me/573005360298?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20de%20extintores." target="_blank" class="whatsapp-btn" aria-label="Contacto por WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT INTEGRADO -->
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = hamburger.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    function closeMenu() {
+      navLinks.classList.remove('active');
+      const icon = hamburger.querySelector('i');
+      if (icon) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    // Scroll Reveal (IntersectionObserver)
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          
+          // Trigger counters if it's the stats container
+          if (entry.target.id === 'statsContainer') {
+            startCounters();
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, #statsContainer').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Animated Counters
+    let countersStarted = false;
+    function startCounters() {
+      if (countersStarted) return;
+      countersStarted = true;
+
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const updateCounter = () => {
+          current += step;
+          if (current < target) {
+            counter.innerText = '+' + Math.ceil(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.innerText = '+' + target.toLocaleString();
+          }
+        };
+        updateCounter();
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const header = item.querySelector('.faq-header');
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
